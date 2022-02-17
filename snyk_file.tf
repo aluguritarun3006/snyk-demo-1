@@ -19,6 +19,9 @@ resource "aws_s3_bucket" "b2" {
     Name        = "My bucket"
     Environment = "Dev"
   }
+  versioning {
+    enabled = true
+  }
 }
 
 resource "aws_s3_bucket_acl" "example" {
